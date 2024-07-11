@@ -1,0 +1,56 @@
+﻿<Page
+    x:Class="DiceRollerPart2.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DiceRollerPart2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <Style TargetType="Image">
+            <Setter Property="Width" Value="75"/>
+            <Setter Property="Height" Value="75"/>
+        </Style>
+    </Page.Resources>
+    
+    <StackPanel>
+        <TextBlock FontWeight="Bold" Text="{Binding SumRandomNumbers}"/>
+        <TextBlock FontWeight="Normal" Text="{Binding IndividualRolls}"/>
+        <StackPanel Orientation="Horizontal">
+            <Button x:Name="twoSided" Click="Dice">
+                <Image Source ="Assets\dice-blue-2sided.png"/>
+            </Button>
+            <Button x:Name="threeSided" Click="Dice">
+                <Image Source ="Assets\dice-blue-3sided.png"/>
+            </Button>
+            <Button x:Name="fourSided" Click="Dice">
+                <Image Source ="Assets\dice-blue-4sided.png"/>
+            </Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button x:Name="sixSided" Click="Dice">
+                <Image Source ="Assets\dice-blue-6sided.png"/>
+            </Button>
+            <Button x:Name="eightSided" Click="Dice">
+                <Image Source ="Assets\dice-blue-8sided.png"/>
+            </Button>
+            <Button x:Name="tenSided" Click="Dice">
+                <Image Source ="Assets\dice-blue-10sided.png"/>
+            </Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button x:Name="twelveSided" Click="Dice">
+                <Image Source ="Assets\dice-blue-12sided.png"/>
+            </Button>
+            <Button x:Name="twentySided" Click="Dice">
+                <Image Source ="Assets\dice-blue-20sided.png" />
+            </Button>
+            <Button x:Name="oneHundredSided" Click="Dice">
+                <Image Source ="Assets\dice-blue-100sided.png"/>
+            </Button>
+        </StackPanel>
+        <Button Content="Clear" Width="360" FontWeight="SemiBold" Click="ClearButton"/>
+    </StackPanel>
+</Page>
