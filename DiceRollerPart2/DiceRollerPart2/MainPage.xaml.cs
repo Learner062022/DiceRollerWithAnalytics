@@ -25,13 +25,10 @@ namespace DiceRollerPart2
 
         void Dice(object sender, RoutedEventArgs e)
         {
-            Button button = sender as Button;
+            Button button = (Button)sender;
             _mainPageViewModel.RollDice(button.Name);
         }
 
-        void ClearButton(object sender, RoutedEventArgs e)
-        {
-            _mainPageViewModel.Reset();
-        }
+        void ClearButton(object sender, RoutedEventArgs e) => _mainPageViewModel.Reset();
     }
 }
